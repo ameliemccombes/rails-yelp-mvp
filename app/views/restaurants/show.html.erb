@@ -1,0 +1,15 @@
+<div class='text-center'>
+  <h1>Restaurant details</h1>
+
+  <h2><%= @restaurant.name %></h2>
+  <p><%= @restaurant.category %></p>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.phone_number %></p>
+  <% @reviews.each do |review| %>
+    <ul>
+      <li><%= review.rating %> || <%= review.content %></li>
+    </ul>
+  <% end %>
+
+  <%= link_to "Back to list", restaurants_path %>
+</div>
